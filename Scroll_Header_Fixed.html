@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+     <title>Page test JQuery</title>
+     <meta name="author" content="Luidjy Aubel">
+  </head>
+
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src="jquery.js"></script>
+  </body>
+
+</html>
+<script>
+/*Script qui combine les deux précédant en une seul pour permettre le mouvement de plusieurs élément avex des classe
+différent*/
+//© code par luidjy Aubel
+window.onscroll = function() {myFunctio()};
+//variable
+var head = document.getElementById("myHeader");
+var stick = head.offsetTop;
+var head2 = document.getElementById("myHeader2");
+var sticky2 = head2.offsetTop;
+  
+function myFunctio() {
+  if ((window.pageYOffset > stick) && (window.pageYOffset > sticky2)) {
+    head.classList.add("sticky");
+    head2.classList.add("sticky2");
+  } else {
+    head.classList.remove("sticky");
+head2.classList.remove("sticky2");
+  }
+}
+</script>
