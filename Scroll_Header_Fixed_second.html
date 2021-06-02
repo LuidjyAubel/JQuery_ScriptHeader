@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+     <title>Page test JQuery</title>
+     <meta name="author" content="Luidjy Aubel">
+  </head>
+
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src="jquery.js"></script>
+  </body>
+
+</html>
+<script>
+//2eme fonction qui fonctionne pour le scroll "bas du header"
+window.onscroll = function() {myFunction2()};
+
+var header2 = document.getElementById("myHeader2");
+var sticky2 = header2.offsetTop;
+
+function myFunction2() {
+  if (window.pageYOffset > sticky2) {
+    header2.classList.add("sticky2");
+  } else {
+    header2.classList.remove("sticky2");
+  }
+}
+</script>

@@ -1,0 +1,10 @@
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky2 {
+  position: fixed;
+  top: 88px;
+  width: 100%;
+}

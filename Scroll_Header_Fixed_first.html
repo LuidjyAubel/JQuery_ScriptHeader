@@ -13,24 +13,17 @@
 
 </html>
 <script>
-/*Script qui combine les deux précédant en une seul pour permettre le mouvement de plusieurs élément avex des classe
-différent*/
-//© code par luidjy Aubel
+//1er fonction qui fonctionne pour le scroll du "haut du header"
 window.onscroll = function() {myFunctio()};
-//variable
+
 var head = document.getElementById("myHeader");
 var stick = head.offsetTop;
-var head2 = document.getElementById("myHeader2");
-var sticky2 = head2.offsetTop;
-  
+
 function myFunctio() {
-  if ((window.pageYOffset > stick) && (window.pageYOffset > sticky2)) {
+  if (window.pageYOffset > stick) {
     head.classList.add("sticky");
-    head2.classList.add("sticky2");
-// u can use addClass like classelist.add with  $("div").addClass("sticky");
   } else {
     head.classList.remove("sticky");
-head2.classList.remove("sticky2");
   }
 }
 </script>
