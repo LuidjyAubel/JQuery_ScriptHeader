@@ -8,15 +8,23 @@
 
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-     <script src="jquery.js"></script>
   </body>
-
+    <div id="myHeader"><h1>titre</h1></div>
+    <div id="myHeader2"><h2>titre 2</h2></div>
 </html>
 <script>
 /*Script qui combine les deux précédant en une seul pour permettre le mouvement de plusieurs élément avex des classe
 différent*/
 //© code par luidjy Aubel
-window.onscroll = function() {myFunctio()};
+var Lscreen = screen.width;
+var lscreen = screen.height;
+console.log('Largeur '+Lscreen+' Longueur '+lscreen);
+
+if( screen.width >= 920 && screen.height >= 180 ){
+   window.onscroll = function() {myFunctio()};
+   console.log('in the loop ');
+}
+
 //variable
 var head = document.getElementById("myHeader");
 var stick = head.offsetTop;
@@ -24,7 +32,7 @@ var head2 = document.getElementById("myHeader2");
 var sticky2 = head2.offsetTop;
   
 function myFunctio() {
-  if ((window.pageYOffset > stick) && (window.pageYOffset > sticky2)) {
+  if ((window.pageYOffset > stick) && (window.pageYOffset > sticky2)) { //u can just put (window.pageYOffset >  sticky) for another type of scrolling
     head.classList.add("sticky");
     head2.classList.add("sticky2");
 // u can use addClass like classelist.add with  $("div").addClass("sticky");
