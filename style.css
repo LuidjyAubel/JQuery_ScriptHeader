@@ -8,3 +8,13 @@
   top: 88px;
   width: 100%;
 }
+.sticky3 {
+  position: fixed;
+	top: -10px;
+  width: 100%;
+}
+	.sticky4 {
+  position: fixed;
+	top: 90px;
+  width: 100%;
+}

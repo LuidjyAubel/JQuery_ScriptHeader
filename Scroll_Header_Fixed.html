@@ -22,7 +22,16 @@ console.log('Largeur '+Lscreen+' Longueur '+lscreen);
 
 if( screen.width >= 920 && screen.height >= 180 ){
    window.onscroll = function() {myFunctio()};
-   console.log('in the loop ');
+   console.log('in the loop >= ');
+}else if (screen.width <= 500 && screen.height >= 180){
+  window.onscroll = function(){myFunctio2()};
+  console.log('in the loop <')
+  //var msg = "debug de la boucle responsive";
+  //window.alert(msg);
+}else if ((screen.width >500 )&&(screen.width < 920)){
+  window.onscroll = function(){myFunctio3()};
+  //var msg2 = "debug tablette";
+  //window.alert(msg2);
 }
 
 //variable
@@ -38,7 +47,27 @@ function myFunctio() {
 // u can use addClass like classelist.add with  $("div").addClass("sticky");
   } else {
     head.classList.remove("sticky");
-head2.classList.remove("sticky2");
+    head2.classList.remove("sticky2");
+  }
+}
+function myFunctio2() {
+  if (window.pageYOffset > stick) { //u can just put (window.pageYOffset >  sticky) for another type of scrolling
+    head.classList.add("sticky");
+    head2.classList.add("sticky3");
+// u can use addClass like classelist.add with  $("div").addClass("sticky");
+  } else {
+    head.classList.remove("sticky");
+    head2.classList.remove("sticky3");
+  }
+}
+function myFunctio3() {
+  if (window.pageYOffset > stick) { //u can just put (window.pageYOffset >  sticky) for another type of scrolling
+    head.classList.add("sticky");
+    head2.classList.add("sticky4");
+// u can use addClass like classelist.add with  $("div").addClass("sticky");
+  } else {
+    head.classList.remove("sticky");
+    head2.classList.remove("sticky4");
   }
 }
 </script>
