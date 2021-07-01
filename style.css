@@ -18,3 +18,8 @@
 	top: 90px;
   width: 100%;
 }
+.sticky7 {
+  position: fixed;
+  top: 10em;
+  width: 100%;
+}
