@@ -20,15 +20,15 @@ var Lscreen = screen.width;
 var lscreen = screen.height;
 console.log('Largeur '+Lscreen+' Longueur '+lscreen);
 
-if( screen.width >= 920 && screen.height >= 180 ){
+if( screen.width >= 1280 && screen.height >= 720 ){
    window.onscroll = function() {myFunctio()};
    console.log('in the loop >= ');
-}else if (screen.width <= 500 && screen.height >= 180){
+}else if (screen.width <= 500 && screen.height >= 896){
   window.onscroll = function(){myFunctio2()};
   console.log('in the loop <')
   //var msg = "debug de la boucle responsive";
   //window.alert(msg);
-}else if ((screen.width >500 )&&(screen.width < 920)){
+}else if ((screen.width >700 )&&(screen.width <= 1280)){
   window.onscroll = function(){myFunctio3()};
   //var msg2 = "debug tablette";
   //window.alert(msg2);

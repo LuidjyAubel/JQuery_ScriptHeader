@@ -1,0 +1,108 @@
+<script>
+if( screen.width >= 920 && screen.height >= 180 ){
+   window.onscroll = function() {myFunctio()};
+}else if (screen.width <= 500 && screen.height >= 180){
+  window.onscroll = function(){myFunctio2()};
+}else if ((screen.width >500 )&&(screen.width < 920)){
+  window.onscroll = function(){myFunctio3()};
+}
+  
+var head = document.getElementById("myHeader");
+var stick = head.offsetTop;
+var head2 = document.getElementById("myHeader2");
+var sticky2 = head2.offsetTop;
+var head4 = document.getElementById("Panier1");
+var stick4 = head4.offsetTop;
+
+  
+function myFunctio() {
+  if ((window.pageYOffset > stick) && (window.pageYOffset > sticky2)) {
+    head.classList.add("sticky");
+    head2.classList.add("sticky2");
+	  head4.classList.add("sticky7");
+  } else {
+    head.classList.remove("sticky");
+head2.classList.remove("sticky2");
+	  head4.classList.remove("sticky7");
+  }
+}
+  function myFunctio2() {
+  if (window.pageYOffset > stick) { 
+    head.classList.add("sticky");
+    head2.classList.add("sticky3");
+  } else {
+  head.classList.remove("sticky");
+  head2.classList.remove("sticky3");
+  }
+}
+	function myFunctio3() {
+  if (window.pageYOffset > stick) { 
+    head.classList.add("sticky");
+    head2.classList.add("sticky4");
+  } else {
+  head.classList.remove("sticky");
+  head2.classList.remove("sticky4");
+  }
+}
+</script>
+
+// les deux code qui fonctionne mais divisé
+<script>
+if( screen.width >= 920 && screen.height >= 180 ){
+   window.onscroll = function() {myFunctio()};
+}else if (screen.width <= 500 && screen.height >= 180){
+  window.onscroll = function(){myFunctio2()};
+}else if ((screen.width >500 )&&(screen.width < 920)){
+  window.onscroll = function(){myFunctio3()};
+}
+  
+var head = document.getElementById("myHeader");
+var stick = head.offsetTop;
+var head2 = document.getElementById("myHeader2");
+var sticky2 = head2.offsetTop;
+  
+function myFunctio() {
+  if ((window.pageYOffset > stick) && (window.pageYOffset > sticky2)) {
+    head.classList.add("sticky");
+    head2.classList.add("sticky2");
+  } else {
+    head.classList.remove("sticky");
+head2.classList.remove("sticky2");
+  }
+}
+  function myFunctio2() {
+  if (window.pageYOffset > stick) { 
+    head.classList.add("sticky");
+    head2.classList.add("sticky3");
+  } else {
+  head.classList.remove("sticky");
+  head2.classList.remove("sticky3");
+  }
+}
+	function myFunctio3() {
+  if (window.pageYOffset > stick) { 
+    head.classList.add("sticky");
+    head2.classList.add("sticky4");
+  } else {
+  head.classList.remove("sticky");
+  head2.classList.remove("sticky4");
+  }
+}
+</script>
+
+
+<script>
+console.log('debug du programme');
+window.onscroll = function() {myFunctio5()};
+
+var head4 = document.getElementById("Panier1");
+var stick4 = head4.offsetTop;
+
+function myFunctio5() {
+  if (window.pageYOffset > stick4)  { 
+    head4.classList.add("sticky7");
+  } else {
+  head4.classList.remove("sticky7");
+      }
+}
+</script>
